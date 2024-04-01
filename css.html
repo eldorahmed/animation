@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <style>
+      .square1 {
+        background-color: #ff8776;
+        height: 20vw;
+        width: 20vw;
+        border-radius: 20%;
+        position: absolute;
+        top: 50vh;
+        left: 50vw;
+        transform: translate(-50%, -50%);
+        animation: counterClockwise 3s infinite;
+        opacity: 0.9;
+      }
+
+      .square2 {
+        background-color: #5576ed;
+        height: 20vw;
+        width: 20vw;
+        border-radius: 20%;
+        position: absolute;
+        top: 50vh;
+        left: 50vw;
+        transform: translate(-50%, -50%) rotate(15deg);
+        animation: clockwise 4s infinite;
+        opacity: 0.9;
+      }
+
+      @keyframes counterClockwise {
+        50% {
+          transform: translate(-50%, -50%) rotate(180deg);
+        }
+      }
+
+      @keyframes clockwise {
+        30% {
+          transform: translate(-50%, -50%) rotate(180deg);
+        }
+
+        70% {
+          transform: translate(-50%, -50%) rotate(270deg);
+        }
+      }
+
+      .letter {
+        color: white;
+        font-size: 3.5vw;
+        letter-spacing: 0.1em;
+        position: absolute;
+        top: 50vh;
+        left: 50vw;
+        transform: translate(-75%, -50%);
+        opacity: 0.8;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="square1"></div>
+    <div class="square2"></div>
+    <div class="letter">CSS</div>
+    <a class="next" href="./home-button.html">
+      <div class="center">
+        <div class="arrow"></div>
+      </div>
+    </a>
+  </body>
+</html>

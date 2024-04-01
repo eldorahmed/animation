@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>home</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <style>
+      .pulse {
+        width: 100px;
+        height: 100px;
+        background: #ff5a30;
+        border-radius: 50%;
+        color: #fff;
+        font-size: 20px;
+        text-align: center;
+        line-height: 100px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        text-transform: uppercase;
+        animation: home 3s linear infinite;
+      }
+      @keyframes home {
+        0% {
+          box-shadow: 0 0 0 0 rgba(255, 90, 48, 0.7),
+            0 0 0 0 rgba(255, 90, 48, 0.7);
+        }
+        40% {
+          box-shadow: 0 0 0 50px rgba(255, 90, 48, 0),
+            0 0 0 0 rgba(255, 90, 48, 0.7);
+        }
+        80% {
+          box-shadow: 0 0 0 50px rgba(255, 90, 48, 0),
+            0 0 0 30px rgba(255, 90, 48, 0);
+        }
+        100% {
+          box-shadow: 0 0 0 0 rgba(255, 90, 48, 0),
+            0 0 0 30px rgba(255, 90, 48, 0);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <a style="text-decoration: none" href="./index.html">
+      <div class="pulse">home</div>
+    </a>
+  </body>
+</html>

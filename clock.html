@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>clock</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <style>
+      .clock {
+        position: relative;
+        width: 200px;
+        height: 200px;
+        border: 15px solid #ff5f5f;
+        border-radius: 50%;
+        background: url(./img/clock-bg.jpeg);
+        background-size: cover;
+        box-shadow: -2px 2px 0 #e23232, inset 0 0 20px rgba(0, 0, 0, 0.5);
+      }
+      .clock::before {
+        content: "";
+        position: absolute;
+        top: calc(50% - 3px);
+        left: 50%;
+        width: 40%;
+        height: 6px;
+        background: #262626;
+        border-radius: 3px;
+        animation: clock 10s linear infinite;
+        transform-origin: left;
+      }
+      .clock::after {
+        content: "";
+        position: absolute;
+        top: calc(50% - 3px);
+        left: 50%;
+        width: 30%;
+        height: 6px;
+        background: #262626;
+        border-radius: 3px;
+        animation: clock 48s linear infinite;
+        transform-origin: left;
+      }
+      @keyframes clock {
+        0% {
+          transform: rotate(-90);
+        }
+        100% {
+          transform: rotate(270deg);
+        }
+      }
+      span {
+        position: absolute;
+        top: calc(50% - 5px);
+        left: calc(50% - 5px);
+        width: 10px;
+        height: 10px;
+        background: #ff5f5f;
+        z-index: 1;
+        border-radius: 50%;
+      }
+      .arrow::before {
+        left: -7px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="clock"><span></span></div>
+    <a class="next" href="./loader.html">
+      <div class="center">
+        <div class="arrow"></div>
+      </div>
+    </a>
+  </body>
+</html>

@@ -1,0 +1,122 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #07252d;
+}
+h2 {
+  position: relative;
+  font-size: 6em;
+  letter-spacing: 15px;
+  color: #0e3742;
+  text-transform: uppercase;
+  width: 100%;
+  text-align: center;
+  -webkit-box-reflect: below 1px linear-gradient(transparent, #0004);
+  line-height: 0.7em;
+  outline: none;
+  animation: animate 5s linear infinite;
+}
+.shaddow {
+  width: 200px;
+  -webkit-box-reflect: below 1px linear-gradient(transparent, #0004);
+  animation: flip 5s linear infinite;
+}
+@keyframes flip {
+  0% {
+    transform: rotateY(0);
+  }
+  10% {
+    transform: rotateY(180deg);
+  }
+  90% {
+    transform: rotateY(0);
+  }
+  100% {
+    transform: rotateY(180deg);
+  }
+}
+@keyframes animate {
+  0%,
+  18%,
+  20%,
+  50.1%,
+  60%,
+  65.1%,
+  80%,
+  90.1%,
+  92% {
+    color: #0e3742;
+    text-shadow: none;
+  }
+  18.1%,
+  20.1%,
+  30%,
+  50%,
+  60.1%,
+  65%,
+  80.1%,
+  90%,
+  92.1%,
+  100% {
+    color: #fff;
+    text-shadow: 0 0 10px #03bcf4, 0 0 20px #03bcf4, 0 0 40px #03bcf4,
+      0 0 80px #03bcf4, 0 0 160px #03bcf4;
+  }
+}
+.center {
+  position: absolute;
+  right: 100px;
+  transform: rotate(-90deg);
+  width: 0;
+  height: 100px;
+  border-left: 6px dotted rgba(255, 255, 255, 0.2);
+}
+.arrow {
+  position: absolute;
+  width: 6px;
+  height: 40px;
+  left: -6px;
+  background: #fff;
+  animation: move 2s infinite;
+  animation-delay: 5s;
+}
+.arrow::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: -7px;
+  width: 20px;
+  height: 20px;
+  border-bottom: 6px solid #fff;
+  border-right: 6px solid #fff;
+  transform: rotate(45deg);
+}
+@keyframes move {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+}
+.next {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  height: 100px;
+  width: 150px;
+}

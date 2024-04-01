@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loader</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <style>
+      .loader {
+        width: 100px;
+        height: 100px;
+        background: #fff;
+        border-radius: 10px;
+        animation: fold 2s linear infinite;
+      }
+      @keyframes fold {
+        0% {
+          transform: perspective(200px) rotateX(0deg) rotateY(0deg);
+        }
+        50% {
+          transform: perspective(200px) rotateX(-180deg) rotateY(0deg);
+        }
+        100% {
+          transform: perspective(200px) rotateX(-180deg) rotateY(-180deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="loader"></div>
+    <a class="next" href="./loading.html">
+      <div class="center">
+        <div class="arrow"></div>
+      </div>
+    </a>
+  </body>
+</html>
